@@ -1,0 +1,145 @@
+# * alphabetical
+super + alt + a
+    emacsclient -cq --eval "(sk:org-agenda-dashboard)"
+
+super + alt + b
+    ~/.config/simonkir/bluetooth-connect.sh
+
+super + alt + shift + b
+    ~/.config/simonkir/bluetooth-disconnect.sh
+
+super + alt + ctrl + b
+    blueberry
+
+super + alt + c
+    thunderbird -calendar
+
+super + alt + shift + c
+    firefox https://calendar.google.com
+
+super + alt + ctrl + c
+    thunderbird -addressbook
+
+super + alt + d
+    digikam
+
+super + alt + shift + d
+    ~/.config/simonkir/nextcloud-memories.sh
+
+super + alt + e
+    emacsclient -cq
+
+super + alt + shift + e
+    emacs
+
+super + alt + f
+    ~/.config/simonkir/nextcloud-files.sh
+
+super + alt + i
+    inkscape
+
+super + alt + j
+    firefox https://web.whatsapp.com
+
+super + alt + k
+    krita
+
+super + alt + m
+    thunderbird -mail
+
+super + alt + shift + m
+    emacsclient -cq --eval "(sk:osm-home)"
+
+super + alt + n
+    ~/.config/simonkir/nextcloud-notes.sh
+
+super + alt + o
+    libreoffice
+
+super + alt + p
+    emacsclient -cq --eval "(sk:run-ipython)"
+
+super + alt + r
+    ~/.config/sxhkd/launch-sxhkd.sh
+
+super + alt + s
+    spotify-launcher
+
+super + alt + t
+    firefox https://linguee.com
+
+super + alt + shift + t
+    firefox https://websters1913.com
+
+super + alt + v
+    pavucontrol
+
+super + alt + shift + v
+    paprefs
+
+super + alt + w
+    firefox
+
+super + alt + x
+    ~/.config/simonkir/random-wallpaper.sh
+
+super + alt + shift + x
+    ~/.config/conky/launch-conky.sh
+
+super + alt + y
+    firefox https://youtube.com
+
+# * window-manager stuff
+super + Escape
+    xkill
+
+super + Return
+    alacritty
+
+super + KP_Enter
+    alacritty
+
+super + 9
+    betterlockscreen -l & systemctl sleep
+
+super + shift + 9
+    betterlockscreen -l
+
+super + ctrl + 9
+    betterlockscreen -l & systemctl hibernate
+
+# * screenshots
+Print
+    scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
+
+ctrl + Print
+     xfce4-screenshooter
+
+# * multimedia
+XF86AudioRaiseVolume
+    amixer set Master 6%+
+
+XF86AudioLowerVolume
+    amixer set Master 6%-
+
+XF86AudioMute
+    amixer -D pulse set Master 1+ toggle
+
+XF86AudioPlay
+    playerctl play-pause
+
+XF86AudioNext
+    playerctl next
+
+XF86AudioPrev
+    playerctl previous
+
+XF86AudioStop
+    playerctl stop
+
+# * backlight
+XF86MonBrightnessUp
+    xbacklight -inc 10
+
+XF86MonBrightnessDown
+    xbacklight -dec 10

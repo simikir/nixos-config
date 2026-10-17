@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+#herbstluftwm start
+hc() {
+    herbstclient "$@"
+}
+
+# launching polybar & tray icons
+~/.config/polybar/launch.sh &
+volumeicon &
+nm-applet &
+
+# general applications
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+/usr/lib/xfce4/notifyd/xfce4-notifyd &
+xfce4-power-manager &
+~/.emacs.d/launch-daemon.sh &
+
+# compositor & wallpaper
+~/.config/picom/picom.sh &
+nitrogen --restore &
+
+# keybinds are in ~/.config/sxhkd/sxhkdrc
+sxhkd &
+
+# open ws 1 on second monitor at startup
+hc cycle_monitor
+hc use_index 0

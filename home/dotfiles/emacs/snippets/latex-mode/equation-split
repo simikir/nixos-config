@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: equation split
+# key: eqs
+# --
+\end{IEEEeqnarray*}
+$0
+\begin{IEEEeqnarray*}{rCl'l+x*}

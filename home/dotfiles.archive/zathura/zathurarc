@@ -1,0 +1,32 @@
+# -----
+# colors
+# theme: papercolor theme
+# statusbar: vim-airline light theme
+# -----
+
+set default-bg "#E7E8EB"
+
+set statusbar-bg "#005fff"
+set statusbar-fg "#ffffff"
+
+set notification-bg "#00df87"
+set notification-error-bg "#cf0000"
+set notification-warning-bg "#ff5f00"
+
+set inputbar-bg "#afffff"
+set inputbar-fg "#005fff"
+
+set completion-bg "#afffff"
+set completion-fg "#005fff"
+
+set completion-highlight-fg "#afffff"
+set completion-highlight-bg "#005fff"
+
+set highlight-color "#afff87"
+
+# -----
+# general settings
+# -----
+
+set selection-clipboard clipboard
+set statusbar-home-tilde  true

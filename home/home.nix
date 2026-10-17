@@ -3,6 +3,7 @@
 {
   imports = [
     ./shell.nix
+    ./dotfiles/default.nix
   ];
 
   home.packages = with pkgs; [

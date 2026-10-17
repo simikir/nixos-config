@@ -1,0 +1,27 @@
+# -*- mode: conf -*-
+
+conky.config = {
+
+    update_interval = 2,
+    double_buffer = true,
+
+    own_window = true,
+    own_window_class = "conky",
+    own_window_type = "override",
+    own_window_hints = "undecorated,below,sticky,skip_taskbar,skip_pager",
+    own_window_transparent = true,
+
+    use_xft = true,
+    xftalpha = 0.5,
+    override_utf8_locale = true,
+
+    default_color = "white",
+
+    lua_load = "clock.lua"
+
+};
+
+conky.text = [[
+${alignc}${font Calibri:bold:size=100}${time %H:%M}
+${alignc}${voffset -116}${font Calibri:bold:size=18}${lua date}
+]];

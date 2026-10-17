@@ -1,0 +1,45 @@
+// -*- mode: css -*-
+
+* {
+    background-color:           #292d3e;
+    text-color:                 #eeffff;
+    height:                     24px;
+    font:                       "Noto Sans 10";
+}
+
+#window {
+    anchor:                     south;
+    location:                   south;
+    width:                      100%;
+    children:                   [ horibox ];
+}
+
+#horibox {
+    orientation:                horizontal;
+    children:                   [ prompt, entry, listview ];
+}
+
+#prompt {
+    font:                       "Noto Sans 10";
+    background-color:           #82aaff;
+    text-color:                 #292d3e;
+    padding:                    2px;
+}
+
+#listview {
+    layout:                     horizontal;
+}
+
+#entry {
+    padding:                    4px;
+    expand:                     false;
+    width:                      250px;
+}
+
+#element {
+    padding:                    2px 2px;
+}
+
+#element selected {
+    background-color:           #c3e88d;
+}

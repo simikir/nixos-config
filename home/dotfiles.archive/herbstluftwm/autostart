@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+#herbstluftwm start
+hc() {
+    herbstclient "$@"
+}
+
+hc emit_hook reload
+
+~/.config/herbstluftwm/autostart.d/keybinds
+~/.config/herbstluftwm/autostart.d/attributes
+~/.config/herbstluftwm/autostart.d/rules
+~/.config/herbstluftwm/autostart.d/monitor-settings
+
+# unlock, just to be sure
+hc unlock
+
+# autostart-always after each hlwm (re)start
+~/.config/herbstluftwm/autostart.d/autostart-always
+
+# only load autostart-once on first hlwm launch
+if hc silent new_attr bool my_not_first_autostart ; then
+    ~/.config/herbstluftwm/autostart.d/autostart-once
+fi

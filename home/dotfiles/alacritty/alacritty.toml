@@ -1,0 +1,62 @@
+# * general settings
+terminal.shell.program = "fish"
+mouse.hide_when_typing = true
+scrolling.history = 50000
+
+[window]
+opacity = 0.9
+padding.x = 11
+padding.y = 11
+
+[cursor]
+style.shape = "Beam"
+style.blinking = "On"
+
+vi_mode_style.shape = "Block"
+vi_mode_style.blinking = "Off"
+
+# * theme
+[colors.bright]
+black = "#242837"
+blue = "#5fafff"
+cyan = "#5fd7ff"
+green = "#afff00"
+magenta = "#d787d7"
+red = "#ff0000"
+white = "#e4e4e4"
+yellow = "#ffd700"
+
+[colors.normal]
+black = "#292d3e"
+blue = "#82aaff"
+cyan = "#89ddff"
+green = "#c3e88d"
+magenta = "#c792ea"
+red = "#ff5370"
+white = "#eeffff"
+yellow = "#ffcb6b"
+
+[colors.primary]
+background = "#292d3e"
+foreground = "#eeffff"
+
+# * font
+[font]
+size = 10.0
+
+[font.bold]
+family = "Fira Code"
+style = "Bold"
+
+[font.bold_italic]
+family = "Fira Code"
+style = "Bold Italic"
+
+[font.italic]
+family = "Fira Code"
+style = "Italic"
+
+[font.normal]
+family = "Fira Code"
+style = "Regular"
+

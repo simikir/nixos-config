@@ -1,0 +1,29 @@
+-- -*- mode: conf -*-
+
+conky.config = {
+
+    update_interval = 10,
+    double_buffer = true,
+
+    own_window = true,
+    own_window_class = "conky",
+    own_window_type = "override",
+    own_window_hints = "undecorated,below,sticky,skip_taskbar,skip_pager",
+    own_window_transparent = true,
+    maximum_width = 1880,
+
+    use_xft = true,
+    xftalpha = 0.5,
+    override_utf8_locale = true,
+
+    default_color = "white",
+    color1 = "#212021",
+    color2 = "white",
+
+    lua_load = "quotes.lua",
+
+};
+
+conky.text = [[
+${font Georgia::italic:size=20}${lua quote}
+]];

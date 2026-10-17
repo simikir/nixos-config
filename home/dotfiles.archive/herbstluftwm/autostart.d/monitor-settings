@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+#herbstluftwm start
+hc() {
+    herbstclient "$@"
+}
+
+#Dualmonitor setup
+# Find out your monitor name with xrandr or arandr (save and you get this line)
+~/.screenlayout/default.sh
+hc detect_monitors
+
+# leave space for polybar
+hc pad 0 0 0 24 0
+hc pad 1 0 0 24 0

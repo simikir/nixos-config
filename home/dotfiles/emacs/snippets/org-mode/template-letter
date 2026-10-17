@@ -1,0 +1,40 @@
+# -*- mode: snippet -*-
+# name: letter template
+# key: templttr
+# --
+#+latex_class: scrlttr2
+#+latex_class_options: [11pt,ngerman,enlargefirstpage=true,firstfoot=false,foldmarks=false,fromalign=right,fromemail=false,fromphone=false,fromrule=afteraddress]
+#+latex_header: \usepackage[a4paper,includeheadfoot,margin=2.54cm]{geometry}
+#+latex_header: \usepackage{fontspec} \setmainfont[Ligatures=TeX]{Georgia}
+# #+latex_header: \usepackage{setspace} \onehalfspacing
+#+latex_header: \usepackage{parskip}
+#+latex_header: \usepackage[ngerman]{babel} \babelhyphenation{}
+#+language: de
+
+#+latex: \renewcommand*{\raggedsignature}{\raggedright}
+
+#+options: toc:nil
+#+date: `(format-time-string "%d. %B %Y")`
+
+\setkomavar{fromname}{SIMONKIR}
+\setkomavar{fromaddress}{SIMONKIR'S ADDRESS}
+\setkomavar{fromphone}[]{}
+\setkomavar{fromemail}[]{}
+
+#+attr_latex: :options {RECIPIENT\\\\RECIPIENT'S ADDRESS}
+#+begin_letter
+
+\setkomavar{subject}{SUBJECT}
+
+\opening{GREETING}
+
+$0
+
+\closing{SALUTATION}
+
+# \ps PS: …
+
+# \setkomavar*{enclseparator}{Anlagen}
+# \encl{}
+
+#+end_letter

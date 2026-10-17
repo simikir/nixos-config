@@ -1,0 +1,14 @@
+[wallpaper]
+directory = "~/.config/simikir/backgrounds"
+transition = ["zoom", "stripes", "honeycomb"]
+transition_duration = 500
+per_monitor_directories = true
+
+[wallpaper.default]
+path = "~/.config/simikir/backgrounds"
+
+[wallpaper.automation]
+enabled = true
+order = "random"
+interval_seconds = 150000
+

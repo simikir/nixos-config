@@ -1,0 +1,84 @@
+--[[
+    `quotes.csv' contains quotes in the format of ``"QUOTE","AUTHOR","TITLE"''
+    the file should be located in ~/.config/conky/
+    the AUTHOR and/or TITLE fields can be left blank
+]]--
+
+-- load the csv file into a table
+function loadCSV(filename)
+    local file = io.open(filename, "r")
+    local lines = {}
+
+    for line in file:lines() do
+        local fields = {}
+        for field in line:gmatch('"([^"]*)"') do
+            table.insert(fields, field)
+        end
+        table.insert(lines, fields)
+    end
+
+    file:close()
+    return lines
+end
+
+-- choose a random line from the csv file and return a finished quote string
+function getRandomQuoteFromCSV(filename)
+    local lines = loadCSV(filename)
+
+    -- calculate a set seed for rng
+    --   – uses process id, date of month, month, year and hour to compute the seed
+    --   – with this setup, multi-monitor compatibility is guaranteed by using PID
+    local stat_file = io.open("/proc/self/stat")
+    local stat_file_contents = stat_file:read("*a")
+    stat_file:close()
+    pid = stat_file_contents:match("(%d+)")
+    math.randomseed(pid * os.date("%d%H") * os.date("%Y%m"))
+
+    return lines[math.random(#lines)]
+    -- repeat
+    --     fields = lines[math.random(#lines)]
+    -- until True
+
+    -- return fields
+end
+
+function conky_quote()
+    local quote = getRandomQuoteFromCSV(os.getenv("HOME") .. "/.config/conky/quotes.csv")
+    local quoteText = quote[1]
+    local quoteAuthor = quote[2]
+    local quoteTitle = quote[3]
+    local quoteSource = ""
+
+    -- surround title in parentheses
+    if quoteTitle ~= "" then
+        quoteSource = quoteAuthor .. ": " .. quoteTitle .. "."
+    else
+        quoteSource = quoteAuthor .. "."
+    end
+
+    -- add anonymous author in case none is given
+    if quoteAuthor == "" then
+        quoteAuthor = "Anonymous"
+    end
+
+    -- wrap long quotes
+    local maxLineLength = 90
+    local quoteTextWrapped = ""
+    local line = ""
+
+    for word in quoteText:gmatch("%S+") do
+        if #line + #word + 1 > maxLineLength then
+            quoteTextWrapped = quoteTextWrapped .. line .. "\n"
+            line = ""
+        end
+
+        if line == "" then
+            line = word
+        else
+            line = line .. " " .. word
+        end
+    end
+    quoteTextWrapped = quoteTextWrapped .. line
+
+    return quoteTextWrapped:lower() .. "\n\n" .. "~ " .. quoteSource:lower()
+end
