@@ -3,6 +3,7 @@
 {
   imports = [
     ./shell.nix
+    ./terminal.nix
     ./dotfiles/default.nix
   ];
 
@@ -39,8 +40,6 @@
         email = "simi@kir.org";
       };
     };
-
-    alacritty.enable = true;
 
     hyprlock.enable = true;
     noctalia.enable = true;
