@@ -1,54 +1,65 @@
 { config, pkgs, ...}:
 
 {
-  # home.packages = with pkgs; [
-  #   grim
+  home.packages = with pkgs; [
+    grim
+    pavucontrol
 
-  #   jupyter
-  #   paraview
-  #   pdftk
+    jupyter
+    paraview
+    pdftk
 
-  #   digikam
-  #   gimp
-  #   inkscape
-  #   libreoffice
-  #   spotify
-  # ];
+    digikam
+    gimp
+    inkscape
+    libreoffice
+    spotify
 
-  # programs = {
-  #    rclone.enable = true;
-  #    eza.enable = true;
-  #    zoxi.enable = true;
+    fira-code
+    fira-code-symbols
+    nerd-fonts.fira-code
+    corefonts
+  ];
 
-  #    git = {
-  #      enable = true;
-  #      settings.user = {
-  #        name = "simikir";
-  #        email = "simi@kir.org";
-  #      };
-  #    };
+  fonts.fontconfig.enable = true;
 
-  #    bash.enable = true;
-  #    zsh.enable = true;
-  #    fish.enable = true;
+  programs = {
+     rclone.enable = true;
+     eza.enable = true;
+     zoxide.enable = true;
 
-  #    alacritty.enable = true;
-  #    hyfetch.enable = true;
+     git = {
+       enable = true;
+       settings.user = {
+         name = "simikir";
+         email = "simi@kir.org";
+       };
+     };
 
-  #    satty.enable = true;
+     bash.enable = true;
+     fish.enable = true;
+     htop.enable = true;
 
-  #    texlive = {
-  #      enable = true;
-  #      package = "texliveFull";
-  #    };
+     alacritty.enable = true;
+     hyfetch.enable = true;
 
-  #    emacs = {
-  #      enable = true;
-  #      package = "emacs-gtk";
-  #    };
+     hyprlock.enable = true;
+     noctalia.enable = true;
 
-  #    pandoc.enable = true;
-  # }
+     satty.enable = true;
+
+     texlive.enable = true;
+
+     emacs = {
+       enable = true;
+       package = pkgs.emacs-gtk;
+     };
+
+     pandoc.enable = true;
+
+     firefox.enable = true;
+     thunderbird.enable = true;
+  };
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
