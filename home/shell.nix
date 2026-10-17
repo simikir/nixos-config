@@ -62,5 +62,16 @@ end
       icons = "auto";
     };
 
+    hyfetch = {
+      enable = true;
+      settings = {
+        preset = "rainbow";
+        mode = "rgb";
+        color_align.mode = "horizontal";
+        backend = "neofetch";
+        pride_month_disable = true;
+      };
+    };
+
   };
 }

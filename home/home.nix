@@ -40,7 +40,6 @@
     };
 
     alacritty.enable = true;
-    hyfetch.enable = true;
 
     hyprlock.enable = true;
     noctalia.enable = true;
