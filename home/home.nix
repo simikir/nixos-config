@@ -1,6 +1,10 @@
 { config, pkgs, ...}:
 
 {
+  imports = [
+    ./shell.nix
+  ];
+
   home.packages = with pkgs; [
     grim
     pavucontrol
@@ -25,8 +29,6 @@
 
   programs = {
      rclone.enable = true;
-     eza.enable = true;
-     zoxide.enable = true;
 
      git = {
        enable = true;
@@ -36,7 +38,6 @@
        };
      };
 
-     bash.enable = true;
      fish.enable = true;
      htop.enable = true;
 
@@ -61,7 +62,14 @@
      thunderbird.enable = true;
   };
 
-  # This value determines the home Manager release that your
+  home.sessionVariables = {
+    WINIT_X11_SCALE_FACTOR = 1;
+    EDITOR = "emacsclient -tq";
+    VISUAL = "emacsclient -cq";
+    BROWSER = "firefox";
+  };
+
+  # this value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new home Manager release introduces backwards
   # incompatible changes.
