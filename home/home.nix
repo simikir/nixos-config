@@ -28,38 +28,36 @@
   fonts.fontconfig.enable = true;
 
   programs = {
-     rclone.enable = true;
+    htop.enable = true;
+    rclone.enable = true;
 
-     git = {
-       enable = true;
-       settings.user = {
-         name = "simikir";
-         email = "simi@kir.org";
-       };
-     };
+    git = {
+      enable = true;
+      settings.user = {
+        name = "simikir";
+        email = "simi@kir.org";
+      };
+    };
 
-     fish.enable = true;
-     htop.enable = true;
+    alacritty.enable = true;
+    hyfetch.enable = true;
 
-     alacritty.enable = true;
-     hyfetch.enable = true;
+    hyprlock.enable = true;
+    noctalia.enable = true;
 
-     hyprlock.enable = true;
-     noctalia.enable = true;
+    satty.enable = true;
 
-     satty.enable = true;
+    texlive.enable = true;
 
-     texlive.enable = true;
+    emacs = {
+      enable = true;
+      package = pkgs.emacs-gtk;
+    };
 
-     emacs = {
-       enable = true;
-       package = pkgs.emacs-gtk;
-     };
+    pandoc.enable = true;
 
-     pandoc.enable = true;
-
-     firefox.enable = true;
-     thunderbird.enable = true;
+    firefox.enable = true;
+    thunderbird.enable = true;
   };
 
   home.sessionVariables = {
