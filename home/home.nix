@@ -46,7 +46,10 @@
 
     satty.enable = true;
 
-    texlive.enable = true;
+    texlive = {
+      enable = true;
+      packageSet = pkgs.texliveFull;
+    };
 
     emacs = {
       enable = true;
