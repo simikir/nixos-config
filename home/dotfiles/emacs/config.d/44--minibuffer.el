@@ -29,6 +29,9 @@
 (use-package vertico-posframe
   :demand t
   :after vertico
+  :general
+  (general-def-leader "t p" 'vertico-posframe-mode)
+
   :config
   (setq vertico-posframe-poshandler #'posframe-poshandler-frame-bottom-center)
   (setq vertico-posframe-parameters '((left-fringe . 4) (right-fringe . 4)))
