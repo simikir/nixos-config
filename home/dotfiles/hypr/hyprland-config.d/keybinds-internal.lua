@@ -102,7 +102,7 @@ hl.bind("SUPER + SHIFT + H", hl.dsp.layout("swapcol l"))
 hl.bind("SUPER + SHIFT + L", hl.dsp.layout("swapcol r"))
 hl.bind("SUPER + SHIFT + left", hl.dsp.layout("swapcol l"))
 hl.bind("SUPER + SHIFT + right", hl.dsp.layout("swapcol r"))
-hl.bind("SUPER + p", hl.dsp.layout("promote"))
+hl.bind("SUPER + P", hl.dsp.layout("promote"))
 
 -- ** dwindle layout
 -- hl.bind("SUPER + TODO", hl.dsp.layout("togglesplit"))
@@ -114,7 +114,7 @@ hl.bind("ALT + TAB", layout_bind({monocle = hl.dsp.layout("cyclenext")}))
 hl.bind("ALT + SHIFT + TAB", layout_bind({monocle = hl.dsp.layout("cycleprev")}))
 
 -- * window keybinds
-hl.bind("SUPER + P", hl.dsp.window.pseudo())
+-- hl.bind("SUPER + P", hl.dsp.window.pseudo())
 hl.bind("SUPER + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind("SUPER + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 hl.bind("SUPER + SHIFT + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
