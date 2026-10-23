@@ -41,6 +41,11 @@
       };
     };
 
+    nh = {
+      enable = true;
+      osFlake = "~/nixos-config/flake.nix";
+    };
+
     hyprlock.enable = true;
     noctalia.enable = true;
 

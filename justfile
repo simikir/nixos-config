@@ -3,24 +3,21 @@ default:
 
 
 rebuild:
-    sudo nixos-rebuild switch --flake .
+    nh os switch -a .
 
-update:
-    sudo nix flake update
-
-upgrade: update rebuild
+upgrade:
+    nh os switch -au .
 
 
 
-gc:
-    sudo nix-collect-garbage
+info:
+    nh os info
 
-optimise:
-    sudo nix-store --optimise
 
-list-generations:
-    sudo nix profile history --profile /nix/var/nix/profiles/system
 
-delete-older-generations threshold="30d":
-    sudo nix profile wipe-history --older-than {{threshold}} --profile /nix/var/nix/profiles/system
+clean-keep keep_gens="20":
+    nh clean all -k {{keep_gens}} -a
+
+clean-until keep_until="18d":
+    nh clean all -K {{keep_until}} -a
 
