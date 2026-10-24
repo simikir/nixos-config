@@ -4,6 +4,7 @@
   imports = [
     ./shell.nix
     ./terminal.nix
+    ./browser.nix
     ./dotfiles/default.nix
   ];
 
@@ -63,7 +64,6 @@
 
     pandoc.enable = true;
 
-    firefox.enable = true;
     thunderbird.enable = true;
   };
 
@@ -71,7 +71,6 @@
     WINIT_X11_SCALE_FACTOR = 1;
     EDITOR = "emacsclient -tq";
     VISUAL = "emacsclient -cq";
-    BROWSER = "firefox";
   };
 
   # this value determines the home Manager release that your
