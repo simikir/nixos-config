@@ -16,8 +16,8 @@
 #+options: toc:nil
 #+date: `(format-time-string "%d. %B %Y")`
 
-\setkomavar{fromname}{SIMONKIR}
-\setkomavar{fromaddress}{SIMONKIR'S ADDRESS}
+\setkomavar{fromname}{AUTHOR}
+\setkomavar{fromaddress}{AUTHOR'S ADDRESS}
 \setkomavar{fromphone}[]{}
 \setkomavar{fromemail}[]{}
 

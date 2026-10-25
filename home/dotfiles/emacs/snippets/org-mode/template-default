@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: default template
+# name: default header template
 # key: tempdef
 # --
 #+latex_class: article
@@ -17,7 +17,7 @@
 
 #+title: TITLE
 #+subtitle: SUBTITLE
-#+author: SIMONKIR
+#+author: AUTHOR
 #+date: {{{time(%d. %B %Y)}}}
 
 $0

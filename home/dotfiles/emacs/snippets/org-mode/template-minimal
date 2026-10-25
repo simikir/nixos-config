@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: minimal template
+# key: tempmin
+# --
+$0
+
+* misc :noexport:
