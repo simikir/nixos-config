@@ -20,6 +20,7 @@
     gimp
     inkscape
     libreoffice
+    scribus
     spotify
 
     fira-code
