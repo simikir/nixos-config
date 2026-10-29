@@ -140,6 +140,8 @@
 (use-package markdown-mode
   :config
   (setq markdown-command '("pandoc" "--from=markdown" "--to=html5"))
+  (setq-default markdown-enable-math t)
+  (setq-default markdown-enable-wiki-links t)
 
   (defun sk:markdown-metadown ()
     (interactive)
@@ -177,5 +179,7 @@
     "M-<down>" 'sk:markdown-metadown
     "M-<up>" 'sk:markdown-metaup
     "M-<right>" 'markdown-demote
-    "M-S-<right>" 'markdown-demote-subtree))
+    "M-S-<right>" 'markdown-demote-subtree
+
+    "C-#" #'(lambda () (interactive) (insert "#"))))
 

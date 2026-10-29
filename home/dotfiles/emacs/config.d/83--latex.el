@@ -59,7 +59,7 @@
 ; * cdlatex
 (use-package cdlatex
   :hook
-  (LaTeX-mode . cdlatex-mode)
+  ((LaTeX-mode markdown-mode) . cdlatex-mode)
   (org-mode . org-cdlatex-mode)
 
   :init
