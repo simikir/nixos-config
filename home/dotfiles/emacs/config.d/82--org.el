@@ -292,6 +292,10 @@ with prefix arg, call `org-return'"
   (setq org-agenda-scheduled-leaders '("Scheduled:  " "Sch. %2dd.: "))
   (setq org-agenda-deadline-leaders '("Deadlined:  " "In %2dd.:   " "Past %2dd.: "))
 
+  (setq org-duration-format 'h:mm)
+  (setq org-agenda-clockreport-parameter-plist '(:link t :maxlevel 10 :formula %))
+  (setq org-agenda-clock-report-header "\n")
+
   (setq org-agenda-sorting-strategy
         '((agenda category-up time-up alpha-up)
           (todo category-up alpha-up)

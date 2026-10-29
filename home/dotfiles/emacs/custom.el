@@ -4,6 +4,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("3061706fa92759264751c64950df09b285e3a2d3a9db771e99bcbb2f9b470037"
+     "5c7720c63b729140ed88cf35413f36c728ab7c70f8cd8422d9ee1cedeb618de5"
+     default))
  '(package-selected-packages
    '(auctex auctex-latexmk avy cape cdlatex consult consult-zoxide corfu
             csv-mode dashboard dirvish doom-modeline doom-themes eat
