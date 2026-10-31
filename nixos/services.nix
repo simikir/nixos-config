@@ -2,18 +2,35 @@
 
 {
 # * display manager
-  services.displayManager.sddm = {
+  services.displayManager.noctalia-greeter = {
     enable = true;
-    wayland.enable = true;
+
+    passwordlessSyncUsers = [ "simikir" ];
+
+    settings = {
+      session.default = "Hyprland";
+      user.default = "simikir";
+
+      appearance = {
+        scheme = "Synced";
+        theme_mode = "dark";
+        password_style = "random";
+      };
+
+      clock = {
+        date_format = "%A, %d. %B %Y";
+        time_font_size = 96;
+        date_font_size = 24;
+      };
+
+      keyboard = {
+        layout = "de";
+        options = "caps:escape";
+      };
+    };
   };
 
   services.desktopManager.plasma6.enable = true;
-
-  # needed to have correct keyboard layout in sddm
-  services.xserver.xkb = {
-    layout = "de";
-    variant = "";
-  };
 
 # * tty
   console.keyMap = "de";
