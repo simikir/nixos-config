@@ -29,10 +29,31 @@
       DownloadDirectory = "/tmp/firefox-downloads";
       PromptForDownloadLocation = true;
 
+      # search engines
+      SearchEngines = {
+        Default = "Google";
+
+        Add = [
+          {
+            Name = "Nix Packages";
+            URLTemplate = "https://search.nixos.org/packages?channel=unstable&query={searchTerms}";
+            IconURL = "https://brand.nixos.org/logos/nixos-logomark-rainbow-gradient-recommended.svg";
+            Alias = "np";
+          }
+
+          {
+            Name = "Nix Options";
+            URLTemplate = "https://search.nixos.org/options?channel=unstable&query={searchTerms}";
+            IconURL = "https://brand.nixos.org/logos/nixos-logomark-rainbow-gradient-recommended.svg";
+            Alias = "no";
+          }
+        ];
+
+        Remove = [ "Bing" "Startpage" ];
+      };
+
       # extensions
-      ExtensionSettings = let
-        moz = short: "https://addons.mozilla.org/firefox/downloads/latest/${short}/latest.xpi";
-      in {
+      ExtensionSettings = {
         "uBlock0@raymondhill.net" = {
           installation_mode = "force_installed";
           updates_disabled = true;
@@ -104,6 +125,7 @@
       };
     };
 
+    # preferences
     profiles."simikir" = {
       settings = {
         "browser.tabs.closeWindowWithLastTab" = false;
@@ -118,42 +140,6 @@
           "prefs" = false;
           "prefs.modified" = false;
           "tabs" = false;
-        };
-      };
-
-      search = {
-        force           = true;
-        default         = "Google";
-        privateDefault  = "Google";
-
-        engines = {
-          "Nix Packages" = {
-            urls = [
-              {
-                template = "https://search.nixos.org/packages";
-                params = [
-                  { name = "channel"; value = "unstable"; }
-                  { name = "query";   value = "{searchTerms}"; }
-                ];
-              }
-            ];
-            # icon           = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-            definedAliases = [ "@np" ];
-          };
-
-          "Nix Options" = {
-            urls = [
-              {
-                template = "https://search.nixos.org/options";
-                params = [
-                  { name = "channel"; value = "unstable"; }
-                  { name = "query";   value = "{searchTerms}"; }
-                ];
-              }
-            ];
-            # icon           = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-            definedAliases = [ "@no" ];
-          };
         };
       };
     };
