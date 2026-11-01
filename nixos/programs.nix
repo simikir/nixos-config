@@ -38,8 +38,6 @@
   ];
 
 # * programs
-  programs.nm-applet.enable = true;
-
   programs.xwayland.enable = true;
   programs.hyprland.enable = true;
   programs.vim.enable = true;

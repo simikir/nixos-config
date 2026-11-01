@@ -11,6 +11,7 @@
   home.packages = with pkgs; [
     grim
     pavucontrol
+    networkmanagerapplet
 
     jupyter
     paraview
