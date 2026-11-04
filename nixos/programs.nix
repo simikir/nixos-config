@@ -31,10 +31,6 @@
     xkill
     hyprpolkitagent
 
-# ** programming
-    python3
-    just
-
   ];
 
 # * programs

@@ -13,7 +13,15 @@
     pavucontrol
     networkmanagerapplet
 
-    jupyter
+    (python3.withPackages (pythonpackages: with pythonpackages; [
+      notebook
+      numpy
+      pandas
+      matplotlib
+      sympy
+    ]))
+
+    just
     paraview
     pdftk
 
