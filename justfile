@@ -15,9 +15,9 @@ info:
 
 
 
-clean-keep keep_gens="20":
+clean-keep-gens keep_gens="20": && rebuild
     nh clean all -k {{keep_gens}} -a
 
-clean-until keep_until="18d":
+clean-keep-until keep_until="18d": && rebuild
     nh clean all -K {{keep_until}} -a
 
