@@ -65,10 +65,6 @@ type = "sysmon"
 stat = "cpu_temp"
 custom_image = "~/.config/simikir/icons/temperature.svg"
 
-# ** notifications
-[widget.notifications]
-hide_when_no_unread = true
-
 # ** ram
 [widget.ram]
 type = "sysmon"
@@ -101,5 +97,5 @@ widget_spacing = 4
 # ** system tools
 [[bar.default.capsule_group]]
 id = "system-tools"
-members = ["clipboard", "notifications", "control-center"]
+members = ["clipboard", "control-center"]
 widget_spacing = 16
