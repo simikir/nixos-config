@@ -36,6 +36,7 @@
     fira-code-symbols
     nerd-fonts.fira-code
     corefonts
+    carlito
   ];
 
   fonts.fontconfig.enable = true;

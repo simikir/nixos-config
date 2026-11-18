@@ -4,7 +4,7 @@ enabled = true
 
 # * clock widget
 [desktop_widgets.widget.clock-0]
-box_height = 220
+box_height = 230
 box_width = 1000
 cx = 960
 cy = 250
@@ -12,7 +12,7 @@ output = "eDP-1"
 type = "clock"
 
 [desktop_widgets.widget.clock-1]
-box_height = 220
+box_height = 230
 box_width = 1000
 cx = 960
 cy = 250
@@ -32,7 +32,7 @@ background = false
 shadow = false
 
 [desktop_widgets.widget.date-0]
-box_height = 40
+box_height = 42
 box_width = 1000
 cx = 960
 cy = 350
@@ -40,7 +40,7 @@ output = "eDP-1"
 type = "clock"
 
 [desktop_widgets.widget.date-1]
-box_height = 40
+box_height = 42
 box_width = 1000
 cx = 960
 cy = 350
