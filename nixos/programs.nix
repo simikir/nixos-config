@@ -13,6 +13,7 @@
   environment.systemPackages = with pkgs; [
 # ** file management
     wget
+    unzip
     p7zip
     file
     tree
